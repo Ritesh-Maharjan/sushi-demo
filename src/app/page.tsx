@@ -34,9 +34,10 @@ export default function Home() {
             alt="long line of sushi"
             sizes="100vw"
             style={{
-              objectFit: 'cover'
+              objectFit: 'cover',
+              height: '600px', 
             }}
-            
+            className="w-full"
           />
         </figure>
       </section>
