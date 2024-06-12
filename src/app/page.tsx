@@ -58,6 +58,7 @@ export default function Home() {
                 width={100}
                 src={"/about-ingredients.jpeg"}
                 alt="Closer looks of sushi"
+                sizes="100vw"
                 className="h-80 w-80 rounded-full object-cover md:rounded-none md:w-full"
               />
             </figure>
@@ -103,6 +104,7 @@ export default function Home() {
                 width={100}
                 src={"/about-chef.jpeg"}
                 alt="Chef looking at the sushi closely in their hand"
+                sizes="100vw"
                 className="h-80 w-80 object-cover md:w-full md:h-full"
               />
             </figure>
@@ -139,6 +141,7 @@ export default function Home() {
                   width={100}
                   src={"/Capture10.png"}
                   alt="Closer looks of sushi"
+                  sizes="100vw"
                   className="h-40 w-40 md:h-80 md:w-80"
                 />
               </figure>
@@ -153,6 +156,7 @@ export default function Home() {
                   width={100}
                   src={"/Capture11.png"}
                   alt="Closer looks of sushi"
+                  sizes="100vw"
                   className="h-40 w-40 md:h-80 md:w-80"
                 />
               </figure>
@@ -167,6 +171,7 @@ export default function Home() {
                   width={100}
                   src={"/Capture12.png"}
                   alt="Closer looks of sushi"
+                  sizes="100vw"
                   className="h-40 w-40 md:h-80 md:w-80"
                 />
               </figure>
@@ -181,6 +186,7 @@ export default function Home() {
                   width={100}
                   src={"/Capture13.png"}
                   alt="Closer looks of sushi"
+                  sizes="100vw"
                   className="h-40 w-40 md:h-80 md:w-80"
                 />
               </figure>
@@ -195,6 +201,7 @@ export default function Home() {
                   width={100}
                   src={"/Capture15.png"}
                   alt="Closer looks of sushi"
+                  sizes="100vw"
                   className="h-40 w-40 md:h-80 md:w-80"
                 />
               </figure>
@@ -209,6 +216,7 @@ export default function Home() {
                   width={100}
                   src={"/Capture16.png"}
                   alt="Closer looks of sushi"
+                  sizes="100vw"
                   className="h-40 w-40 md:h-80 md:w-80"
                 />
               </figure>
