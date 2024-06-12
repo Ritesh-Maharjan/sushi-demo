@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MaxWidthContent from "./MaxWidthContent";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 import {
   Contact,
   CookingPot,
@@ -16,6 +18,16 @@ import {
 
 const Header = () => {
   const [displayMenu, setDisplayMenu] = useState(true);
+	const [animateHome, setAnimateHome] = useState(false);
+
+	const toggleMenu = () => {
+		console.log("Menu button clicked");
+    setDisplayMenu(!displayMenu);
+    // Trigger animation for Home button when menu is opened
+    setAnimateHome(!displayMenu); // Set animateHome to true when menu is opened
+		console.log(displayMenu);
+  };
+
   const today = new Date();
   const options: Intl.DateTimeFormatOptions = {
     month: "short",
@@ -46,7 +58,8 @@ const Header = () => {
         <button
           className="flex flex-col gap-1 z-50"
           aria-label="Menu"
-          onClick={() => setDisplayMenu(!displayMenu)}
+          // onClick={() => setDisplayMenu(!displayMenu)}
+					onClick={toggleMenu}
         >
           <span className="h-3 w-3 rounded-full bg-white inline-block"></span>
           <span className="h-3 w-3 rounded-full bg-white inline-block"></span>
@@ -98,30 +111,54 @@ const Header = () => {
           </div>
           {/* Menu Buttons */}
           <nav className="opacity-95 flex flex-col gap-2 -ml-16">
-            <div className="flex flex-col cursor-pointer">
+
+            <motion.div 
+							initial={{ opacity: 0, y: 50 }} // Initial state: fully transparent and positioned 50px below
+							animate={{ opacity: animateHome ? 0 : 1, y: animateHome ? 50 : 0 }} // Animation: fade in and move to the original position
+							transition={{ duration: 0.5, delay: 0.5 }} // Transition duration and delay
+
+						className="flex flex-col cursor-pointer">
               <span>Home</span>
               <span className="bg-black p-3 rounded-full border-2 border-white w-fit">
                 <Home />
               </span>
-            </div>
-            <div className="flex flex-col cursor-pointer ml-14">
+            </motion.div>
+
+            <motion.div 
+							initial={{ opacity: 0, y: 50 }} // Initial state: fully transparent and positioned 50px below
+							animate={{ opacity: animateHome ? 0 : 1, y: animateHome ? 50 : 0 }} // Animation: fade in and move to the original position
+							transition={{ duration: 0.5, delay: 0.5 }} // Transition duration and delay
+
+						className="flex flex-col cursor-pointer ml-14">
               <span>About</span>
               <span className="bg-black p-3 rounded-full border-2 border-white w-fit">
                 <Info />
               </span>
-            </div>
-            <div className="flex flex-col cursor-pointer ml-14">
+            </motion.div>
+
+            <motion.div 
+							initial={{ opacity: 0, y: 50 }} // Initial state: fully transparent and positioned 50px below
+							animate={{ opacity: animateHome ? 0 : 1, y: animateHome ? 50 : 0 }} // Animation: fade in and move to the original position
+							transition={{ duration: 0.5, delay: 0.5 }} // Transition duration and delay
+
+						className="flex flex-col cursor-pointer ml-14">
               <span>Menu</span>
               <span className="bg-black p-3 rounded-full border-2 border-white w-fit">
                 <CookingPot />
               </span>
-            </div>
-            <div className="flex flex-col cursor-pointer">
+            </motion.div>
+
+            <motion.div
+							initial={{ opacity: 0, y: 50 }} // Initial state: fully transparent and positioned 50px below
+							animate={{ opacity: animateHome ? 0 : 1, y: animateHome ? 50 : 0 }} // Animation: fade in and move to the original position
+							transition={{ duration: 0.5, delay: 0.5 }} // Transition duration and delay
+
+						className="flex flex-col cursor-pointer">
               <span>Contact</span>
               <span className="bg-black p-3 rounded-full border-2 border-white w-fit">
                 <Contact />
               </span>
-            </div>
+            </motion.div>
           </nav>
         </main>
 
