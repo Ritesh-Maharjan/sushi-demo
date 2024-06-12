@@ -2,6 +2,7 @@ import MaxWidthContent from "@/_component/MaxWidthContent";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
+
 export default function Home() {
   return (
     <main className="flex flex-col gap-y-24">
@@ -43,7 +44,8 @@ export default function Home() {
       {/* Ingredient */}
       <section>
         <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
-          <div className="relative w-full text-center">
+          <div 
+					className="relative w-full text-center">
             <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
             <h2 className="text-3xl z-10 font-medium tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
               About Our Ingredients
