@@ -14,7 +14,7 @@ export default function Home() {
               <span className="text-6xl">ロ</span>
               <span className=" text-6xl">ク</span>
             </span>
-            <span className="text-xl self-end ml-10 tracking-wide">
+            <span className="text-xl self-end ml-10 tracking-wide ">
               Authentic <br />
               Omakase{" "}
             </span>
@@ -27,11 +27,15 @@ export default function Home() {
 
         <figure className="w-full -mt-12 -z-20 ">
           <Image
-            height={100}
-            width={100}
+            height={500}
+            width={2000}
             src="/hero-image.jpeg"
             alt="long line of sushi"
-            className="w-full object-fill max-h-80"
+            sizes="100vw"
+            style={{
+              objectFit: 'cover'
+            }}
+            
           />
         </figure>
       </section>
