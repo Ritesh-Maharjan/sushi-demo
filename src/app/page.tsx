@@ -260,7 +260,7 @@ export default function Home() {
 
             <div className="flex flex-none flex-col gap-6">
               <div>
-                <h3 className="border-b">Our Address</h3>
+                <h3 className="border-b text-lg mb-1 font-semibold italic">Our Address</h3>
                 <address>
                   1305 W 12th Ave,
                   <br />
@@ -269,7 +269,7 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <h3 className="border-b">Contact Info</h3>
+                <h3 className="border-b text-lg mb-1 font-semibold italic">Contact Info</h3>
                 <a
                   href="tel:+16043188494"
                   aria-label="Call Us at +1 (604) 318-8494"
@@ -285,7 +285,7 @@ export default function Home() {
               </div>
 
               <div>
-                <h3 className="border-b">Open Hours</h3>
+                <h3 className="border-b text-lg mb-1 font-semibold italic">Open Hours</h3>
                 <p>Mon - Fri: 9am - 10pm</p>
                 <p>Sat - Sun: 11am - 10pm</p>
               </div>
