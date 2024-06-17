@@ -10,19 +10,19 @@ export default function Home() {
       {/* Hero section */}
       <section>
         <MaxWidthContent className="mt-16 flex flex-col gap-y-12 pl-14 ">
-          <h1 className="text-4xl flex tracking-widest">
-            <span className="-rotate-90 inline-block font-medium">ROKU</span>
-            <span className="flex flex-col font-bold  -ml-16">
-              <span className="text-6xl">ロ</span>
-              <span className=" text-6xl">ク</span>
+          <h1 className="text-4xl flex tracking-widest absolute top-100 left-100 z-20">
+            <span className="-rotate-90 inline-block font-medium text-4xl mb-24 ">ROKU</span>
+            <span className="flex flex-col font-bold -ml-24">
+              <span className="text-9xl">ロ</span>
+              <span className=" text-9xl">ク</span>
             </span>
-            <span className="text-xl self-end ml-10 tracking-wide ">
+            <span className="text-3xl self-end ml-2 tracking-wide ">
               Authentic <br />
               Omakase{" "}
             </span>
           </h1>
 
-          <Button className="w-fit z-20" variant={"secondary"}>
+          <Button className="w-fit z-20 absolute bottom-10 left-1/2 -translate-x-1/2" variant={"secondary"}>
             Book now
           </Button>
         </MaxWidthContent>
@@ -36,7 +36,7 @@ export default function Home() {
             sizes="100vw"
             style={{
               objectFit: "cover",
-              height: "600px",
+              height: "900px",
             }}
             className="w-full"
           />
