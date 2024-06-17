@@ -67,17 +67,17 @@ const Header = () => {
         </button>
 
         <nav className="hidden sm:block">
-          <ul className="flex gap-12 items-center">
+          <ul className="flex gap-10 items-center font-montserrat">
             <li>About</li>
             <li>Menu</li>
             <li>Contact</li>
             <li>
-              <Button variant={"default"} onClick={togglePopup}>
+              <Button variant={"goldenborder"} onClick={togglePopup}>
                 Reservations
               </Button>
             </li>
             <li>
-              <Button variant={"secondary"}>Order Now</Button>
+              <Button variant={"goldenborder"}>Order Now</Button>
             </li>
           </ul>
         </nav>

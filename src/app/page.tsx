@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, MapPin } from "lucide-react";
 import Image from "next/image";
 
+
 export default function Home() {
   return (
     <main className="flex flex-col gap-y-24">
@@ -56,8 +57,8 @@ export default function Home() {
         <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
           <div className="relative w-full text-center">
             <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
-            <h2 className="text-3xl z-10 font-medium tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
-              About Our Ingredients
+            <h2 className="text-3xl z-10 font-montserrat tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
+              Fresh Ingredients
             </h2>
           </div>
           <div className="flex items-center gap-10 flex-col md:flex-row">
@@ -102,8 +103,8 @@ export default function Home() {
         <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
           <div className="relative w-full text-center">
             <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
-            <h2 className="text-3xl z-10 font-medium tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
-              About Our Chefs
+            <h2 className="text-3xl z-10 font-montserrat tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
+              About Us
             </h2>
           </div>
           <div className="flex gap-10 flex-col md:flex-row">
@@ -135,7 +136,7 @@ export default function Home() {
         <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
           <div className="relative w-full text-center">
             <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
-            <h2 className="text-3xl z-10 font-medium tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
+            <h2 className="text-3xl z-10 font-montserrat tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
               Our Menu
             </h2>
           </div>
@@ -234,16 +235,44 @@ export default function Home() {
         </MaxWidthContent>
       </section>
 
+      {/* Pricing */}
+      <section>
+        <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
+          <div className="relative w-full text-center">
+            <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
+            <h2 className="text-3xl z-10 font-montserrat tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
+              Pricing
+            </h2>
+            
+          </div>
+          <figure className="md:order-2 w-full h-full">
+              <Image
+                height={100}
+                width={100}
+                src={"/menu-pricing.png"}
+                alt="Menu Pricing"
+                style={{
+                  objectFit: "contain",
+                  height: "900px",
+                }}
+                sizes="100vw"
+                className="h-80 w-80 object-cover md:w-full md:h-full mx-auto"
+              />
+            </figure>
+        </MaxWidthContent>
+      </section>
+
+      {/* Contact us */}
       <section>
         <MaxWidthContent className="flex flex-col items-center justify-center gap-10 pb-16 px-14">
           <div className="relative w-full text-center">
             <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
-            <h2 className="text-3xl z-10 font-medium tracking-wide w-52 md:w-fit md:bg-black md:px-8 mx-auto">
+            <h2 className="text-3xl z-10 font-montserrat tracking-wide w-52 md:w-fit md:bg-black md:px-8 mx-auto ">
               Contact us
             </h2>
           </div>
 
-          <div className="flex gap-8 w-full flex-wrap">
+          <div className="flex gap-8 w-full flex-wrap mt-12">
             <Calendar />
 
             <div className=" flex-grow rounded-2xl overflow-hidden flex-shrink min-h-80 min-w-72">
@@ -260,7 +289,7 @@ export default function Home() {
 
             <div className="flex flex-none flex-col gap-6">
               <div>
-                <h3 className="border-b text-lg mb-1 font-semibold italic">Our Address</h3>
+                <h3 className="border-b text-lg mb-1 font-normal ">Our Address</h3>
                 <address>
                   1305 W 12th Ave,
                   <br />
@@ -269,7 +298,7 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <h3 className="border-b text-lg mb-1 font-semibold italic">Contact Info</h3>
+                <h3 className="border-b text-lg mb-1 font-normal ">Contact Info</h3>
                 <a
                   href="tel:+16043188494"
                   aria-label="Call Us at +1 (604) 318-8494"
@@ -285,7 +314,7 @@ export default function Home() {
               </div>
 
               <div>
-                <h3 className="border-b text-lg mb-1 font-semibold italic">Open Hours</h3>
+                <h3 className="border-b text-lg mb-1 font-normal ">Open Hours</h3>
                 <p>Mon - Fri: 9am - 10pm</p>
                 <p>Sat - Sun: 11am - 10pm</p>
               </div>
@@ -297,6 +326,11 @@ export default function Home() {
             </div>
           </div>
         </MaxWidthContent>
+      </section>
+
+      {/* Footer */}
+      <section className="text-center text-stone-400 text-xs uppercase font-montserra">
+            <p> &copy; 2024 Sushi Restaurant. All Right Reserved.</p>
       </section>
     </main>
   );
