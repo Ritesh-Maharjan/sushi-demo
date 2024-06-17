@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 import { format } from "date-fns";
 import { CalendarIcon, SidebarClose, SidebarOpen } from "lucide-react";
 import { Calendar as Cal } from "@/components/ui/calendar";
-import MaxWidthContent from "./MaxWidthContent";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -31,6 +30,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
+import { usePopupStore } from "@/stores/Popup";
 
 const TIMES = [
   "10:00 AM",
@@ -74,7 +74,9 @@ const formSchema = z.object({
     .min(1),
 });
 
-const Calendar = () => {
+const Calendar = ({ classname }: { classname?: string }) => {
+  const toggle = usePopupStore((state) => state.toggle);
+
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -93,7 +95,21 @@ const Calendar = () => {
   }
 
   return (
-    <div className="bg-black border-2 border-yellow-500 text-white rounded-2xl flex-none">
+    <div
+      className={cn(
+        "bg-black border-2 border-yellow-500 text-white rounded-2xl flex-none",
+        classname
+      )}
+    >
+      {classname && (
+        <button
+          onClick={toggle}
+          aria-label="close popover"
+          className="absolute top-2 right-2 "
+        >
+          <SidebarClose />
+        </button>
+      )}
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}

@@ -1,5 +1,6 @@
 import Calendar from "@/_component/Calendar";
 import MaxWidthContent from "@/_component/MaxWidthContent";
+import Popup from "@/_component/Popup";
 import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, MapPin } from "lucide-react";
 import Image from "next/image";
@@ -7,11 +8,15 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="flex flex-col gap-y-24">
+      <Popup />
+
       {/* Hero section */}
       <section>
         <MaxWidthContent className="mt-16 flex flex-col gap-y-12 pl-14 ">
           <h1 className="text-4xl flex tracking-widest absolute top-100 left-100 z-20">
-            <span className="-rotate-90 inline-block font-medium text-4xl mb-24 ">ROKU</span>
+            <span className="-rotate-90 inline-block font-medium text-4xl mb-24 ">
+              ROKU
+            </span>
             <span className="flex flex-col font-bold -ml-24">
               <span className="text-9xl">ロ</span>
               <span className=" text-9xl">ク</span>
@@ -22,7 +27,10 @@ export default function Home() {
             </span>
           </h1>
 
-          <Button className="w-fit z-20 absolute bottom-10 left-1/2 -translate-x-1/2" variant={"secondary"}>
+          <Button
+            className="w-fit z-20 absolute bottom-10 left-1/2 -translate-x-1/2"
+            variant={"secondary"}
+          >
             Book now
           </Button>
         </MaxWidthContent>
