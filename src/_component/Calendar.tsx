@@ -93,113 +93,108 @@ const Calendar = () => {
   }
 
   return (
-    <section className="fixed flex justify-center overflow-scroll inset-0 z-50 bg-black/60">
-      <div className="bg-black border-2 border-yellow-500 text-white rounded-2xl absolute h-fit top-1/2 -translate-y-1/2 p-8">
-        <button aria-label="close popover" className="absolute top-2 right-2 ">
-          <SidebarClose />
-        </button>
-        <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="p-4 flex flex-col mx-auto my-auto h-full justify-center space-y-8 w-72"
-          >
-            <h2 className="text-center text-2xl font-medium">
-              Book you reservations
-            </h2>
+    <div className="bg-black border-2 border-yellow-500 text-white rounded-2xl flex-none">
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="p-4 flex flex-col mx-auto my-auto h-full justify-center space-y-8 w-72"
+        >
+          <h2 className="text-center text-2xl font-medium">
+            Book you reservations
+          </h2>
 
-            <FormField
-              control={form.control}
-              name="dor"
-              render={({ field }) => (
-                <FormItem className="flex flex-col">
-                  <FormLabel>Date of reservations</FormLabel>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <FormControl>
-                        <Button
-                          variant={"default"}
-                          className={cn(
-                            " pl-3 text-left font-normal",
-                            !field.value && "text-muted-foreground"
-                          )}
-                        >
-                          {field.value ? (
-                            format(field.value, "PPP")
-                          ) : (
-                            <span>Pick a date</span>
-                          )}
-                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                        </Button>
-                      </FormControl>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="start">
-                      <Cal
-                        mode="single"
-                        selected={field.value}
-                        onSelect={field.onChange}
-                        fromDate={new Date()}
-                        initialFocus
-                      />
-                    </PopoverContent>
-                  </Popover>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="time"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Select the time</FormLabel>
-                  <Select
-                    onValueChange={field.onChange}
-                    defaultValue={field.value}
-                  >
+          <FormField
+            control={form.control}
+            name="dor"
+            render={({ field }) => (
+              <FormItem className="flex flex-col">
+                <FormLabel>Date of reservations</FormLabel>
+                <Popover>
+                  <PopoverTrigger asChild>
                     <FormControl>
-                      <SelectTrigger className="bg-primary text-white">
-                        <SelectValue placeholder="Select a timezone" />
-                      </SelectTrigger>
+                      <Button
+                        variant={"default"}
+                        className={cn(
+                          " pl-3 text-left font-normal",
+                          !field.value && "text-muted-foreground"
+                        )}
+                      >
+                        {field.value ? (
+                          format(field.value, "PPP")
+                        ) : (
+                          <span>Pick a date</span>
+                        )}
+                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                      </Button>
                     </FormControl>
-                    <SelectContent className="bg-primary text-white">
-                      {TIMES.map((el, index) => (
-                        <SelectItem value={el} key={index}>
-                          {el}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="numberOfPeople"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Number Of People</FormLabel>
-                  <FormControl>
-                    <Input
-                      type="number"
-                      className="bg-primary text-white"
-                      placeholder="1"
-                      {...field}
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0" align="start">
+                    <Cal
+                      mode="single"
+                      selected={field.value}
+                      onSelect={field.onChange}
+                      fromDate={new Date()}
+                      initialFocus
                     />
+                  </PopoverContent>
+                </Popover>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="time"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Select the time</FormLabel>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger className="bg-primary text-white">
+                      <SelectValue placeholder="Select a timezone" />
+                    </SelectTrigger>
                   </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+                  <SelectContent className="bg-primary text-white">
+                    {TIMES.map((el, index) => (
+                      <SelectItem value={el} key={index}>
+                        {el}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-            <Button variant={"ghost"} type="submit">
-              Book Now
-            </Button>
-          </form>
-        </Form>
-      </div>
-    </section>
+          <FormField
+            control={form.control}
+            name="numberOfPeople"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Number Of People</FormLabel>
+                <FormControl>
+                  <Input
+                    type="number"
+                    className="bg-primary text-white"
+                    placeholder="1"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <Button variant={"ghost"} type="submit">
+            Book Now
+          </Button>
+        </form>
+      </Form>
+    </div>
   );
 };
 
