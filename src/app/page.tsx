@@ -29,7 +29,7 @@ export default function Home() {
           </h1>
 
           <Button
-            className="w-fit z-20 absolute bottom-10 left-1/2 -translate-x-1/2"
+            className="w-fit z-20 absolute bottom-10 left-1/2 -translate-x-1/2 md:hidden"
             variant={"secondary"}
           >
             Book now
@@ -272,8 +272,10 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="flex gap-8 w-full flex-wrap mt-12">
-            <Calendar />
+          <div className="flex gap-10 md:gap-18 w-full flex-wrap mt-12">
+            <div className="md:hidden w-full">
+              <Calendar />
+            </div>
 
             <div className=" flex-grow rounded-2xl overflow-hidden flex-shrink min-h-80 min-w-72">
               <iframe
