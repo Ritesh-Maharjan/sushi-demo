@@ -29,10 +29,18 @@ export default function Home() {
           </h1>
 
           <Button
-            className="w-fit z-20 absolute bottom-10 left-1/2 -translate-x-1/2 md:hidden"
-            variant={"secondary"}
+            className="w-fit z-20 absolute bottom-10 left-1/3 -translate-x-1/2 md:hidden font-semibold text-base"
+            style={{ marginRight: '20px' }}
+            variant={"goldenborder"}
           >
-            Book now
+            Reservations
+          </Button>
+          <Button
+            className="w-fit z-20 absolute bottom-10 left-2/3 -translate-x-1/2 md:hidden font-semibold text-base"
+            style={{ marginLeft: '20px' }}
+            variant={"goldenborder"}
+          >
+            Order Now
           </Button>
         </MaxWidthContent>
 
@@ -145,14 +153,14 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <h3 className="text-xl">Sushi 1</h3>
               <span className="text-muted-foreground">fish fish fish</span>
-              <figure>
-                <Image
+              <figure className="flex items-center justify-center h-full">
+              <Image
                   height={100}
                   width={100}
-                  src={"/Capture10.png"}
+                  src={"/Sushi1.png"}
                   alt="Closer looks of sushi"
                   sizes="100vw"
-                  className="h-40 w-40 md:h-80 md:w-80"
+                  className="h-25 w-40 md:h-25 md:w-60"
                 />
               </figure>
             </div>
@@ -160,14 +168,14 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <h3 className="text-xl">Sushi 2</h3>
               <span className="text-muted-foreground">fish fish fish</span>
-              <figure>
+              <figure className="flex items-center justify-center h-full">
                 <Image
                   height={100}
                   width={100}
-                  src={"/Capture11.png"}
+                  src={"/Sushi2.png"}
                   alt="Closer looks of sushi"
                   sizes="100vw"
-                  className="h-40 w-40 md:h-80 md:w-80"
+                  className="h-25 w-40 md:h-25 md:w-60"
                 />
               </figure>
             </div>
@@ -175,14 +183,14 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <h3 className="text-xl">Sushi 3</h3>
               <span className="text-muted-foreground">fish fish fish</span>
-              <figure>
+              <figure className="flex items-center justify-center h-full">
                 <Image
                   height={100}
                   width={100}
-                  src={"/Capture12.png"}
+                  src={"/Sushi3.png"}
                   alt="Closer looks of sushi"
                   sizes="100vw"
-                  className="h-40 w-40 md:h-80 md:w-80"
+                  className="h-25 w-40 md:h-25 md:w-60"
                 />
               </figure>
             </div>
@@ -190,14 +198,14 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <h3 className="text-xl">Sushi 4</h3>
               <span className="text-muted-foreground">fish fish fish</span>
-              <figure>
+              <figure className="flex items-center justify-center h-full">
                 <Image
                   height={100}
                   width={100}
-                  src={"/Capture13.png"}
+                  src={"/Sushi4.png"}
                   alt="Closer looks of sushi"
                   sizes="100vw"
-                  className="h-40 w-40 md:h-80 md:w-80"
+                  className="h-25 w-40 md:h-25 md:w-60"
                 />
               </figure>
             </div>
@@ -205,14 +213,14 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <h3 className="text-xl">Sushi 4</h3>
               <span className="text-muted-foreground">fish fish fish</span>
-              <figure>
+              <figure className="flex items-center justify-center h-full">
                 <Image
                   height={100}
                   width={100}
-                  src={"/Capture15.png"}
+                  src={"/Sushi5.png"}
                   alt="Closer looks of sushi"
                   sizes="100vw"
-                  className="h-40 w-40 md:h-80 md:w-80"
+                  className="h-25 w-40 md:h-25 md:w-60"
                 />
               </figure>
             </div>
@@ -220,14 +228,14 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <h3 className="text-xl">Sushi 6</h3>
               <span className="text-muted-foreground">fish fish fish</span>
-              <figure>
+              <figure className="flex items-center justify-center h-full">
                 <Image
                   height={100}
                   width={100}
-                  src={"/Capture16.png"}
+                  src={"/Sushi6.png"}
                   alt="Closer looks of sushi"
                   sizes="100vw"
-                  className="h-40 w-40 md:h-80 md:w-80"
+                  className="h-25 w-40 md:h-25 md:w-60"
                 />
               </figure>
             </div>
