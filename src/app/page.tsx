@@ -4,7 +4,8 @@ import Popup from "@/_component/Popup";
 import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, MapPin } from "lucide-react";
 import Image from "next/image";
-
+import { useRef } from "react";
+import Header from "@/_component/Header"; 
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       <Popup />
 
       {/* Hero section */}
-      <section>
+      <section id="home">
         <MaxWidthContent className="mt-16 flex flex-col gap-y-12 pl-14 ">
           <h1 className="text-4xl flex tracking-widest absolute top-100 left-100 z-20">
             <span className="-rotate-90 inline-block font-medium text-4xl mb-24 ">
@@ -61,7 +62,7 @@ export default function Home() {
       </section>
 
       {/* Ingredient */}
-      <section>
+      <section id="ingredients">
         <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
           <div className="relative w-full text-center">
             <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
@@ -107,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* About our chefs */}
-      <section>
+      <section id="about">
         <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
           <div className="relative w-full text-center">
             <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
@@ -120,7 +121,7 @@ export default function Home() {
               <Image
                 height={100}
                 width={100}
-                src={"/about-chef.jpeg"}
+                src={"/About-us.jpeg"}
                 alt="Chef looking at the sushi closely in their hand"
                 sizes="100vw"
                 className="h-80 w-80 object-cover md:w-full md:h-full mx-auto"
@@ -140,7 +141,7 @@ export default function Home() {
       </section>
 
       {/* Menu */}
-      <section>
+      <section id="menu">
         <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
           <div className="relative w-full text-center">
             <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
@@ -244,7 +245,7 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section>
+      <section id="pricing">
         <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
           <div className="relative w-full text-center">
             <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
@@ -271,7 +272,7 @@ export default function Home() {
       </section>
 
       {/* Contact us */}
-      <section>
+      <section id="contact">
         <MaxWidthContent className="flex flex-col items-center justify-center gap-10 pb-16 px-14">
           <div className="relative w-full text-center">
             <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />

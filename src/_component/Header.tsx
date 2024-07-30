@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import MaxWidthContent from "./MaxWidthContent";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Link } from 'react-scroll';
 import {
   Contact,
   CookingPot,
@@ -25,8 +26,7 @@ const Header = () => {
 
   const toggleMenu = () => {
     setDisplayMenu(!displayMenu);
-    // Trigger animation for Home button when menu is opened
-    setAnimateHome(!displayMenu); // Set animateHome to true when menu is opened
+    setAnimateHome(!displayMenu);
   };
 
   const today = new Date();
@@ -39,26 +39,24 @@ const Header = () => {
     .toLocaleDateString("en-US", options)
     .replace(",", "");
 
-  // Get hours, minutes, and seconds
-  const hours = today.getHours().toString().padStart(2, "0");
-
   return (
     <header className="sticky top-0 bg-black/85 z-50 border-b border-gray-600">
       <MaxWidthContent className="flex justify-between items-center px-4">
-        <figure className="overflow-hidden">
-          <Image
-            height={100}
-            width={100}
-            src="/logo.png"
-            alt="Clouds with text logo"
-            className="h-15 w-10"
-          />
-        </figure>
+        <Link to="home" smooth={true} duration={500} className="cursor-pointer">
+          <figure className="overflow-hidden">
+            <Image
+              height={100}
+              width={100}
+              src="/logo.png"
+              alt="Clouds with text logo"
+              className="h-15 w-10"
+            />
+          </figure>
+        </Link>
 
         <button
-          className="sm:hidden flex flex-col gap-1 z-50"
+          className="sm:hidden flex flex-col gap-1 z-50 cursor-pointer"
           aria-label="Menu"
-          // onClick={() => setDisplayMenu(!displayMenu)}
           onClick={toggleMenu}
         >
           <span className="h-3 w-3 rounded-full bg-white inline-block"></span>
@@ -68,15 +66,37 @@ const Header = () => {
 
         <nav className="hidden sm:block">
           <ul className="flex gap-10 items-center font-montserrat">
-            <li>About</li>
-            <li>Menu</li>
-            <li>Contact</li>
-            <li>
+            <li className="cursor-pointer">
+              <Link to="ingredients" smooth={true} duration={500}>
+                Ingredients
+              </Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link to="about" smooth={true} duration={500}>
+                About
+              </Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link to="menu" smooth={true} duration={500}>
+                Menu
+              </Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link to="pricing" smooth={true} duration={500}>
+                Price
+              </Link>
+            </li>
+            <li className="cursor-pointer">
+              <Link to="contact" smooth={true} duration={500}>
+                Contact
+              </Link>
+            </li>
+            <li className="cursor-pointer">
               <Button variant={"goldenborder"} onClick={togglePopup}>
                 Reservations
               </Button>
             </li>
-            <li>
+            <li className="cursor-pointer">
               <Button variant={"goldenborder"}>Order Now</Button>
             </li>
           </ul>
@@ -129,72 +149,92 @@ const Header = () => {
           </div>
           {/* Menu Buttons */}
           <nav className="opacity-95 flex flex-col gap-2 -ml-16">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }} // Initial state: fully transparent and positioned 50px below
-              animate={{
-                opacity: animateHome ? 0 : 1,
-                y: animateHome ? 50 : 0,
-              }} // Animation: fade in and move to the original position
-              transition={{ duration: 0.5, delay: 0.5 }} // Transition duration and delay
-              className="flex flex-col cursor-pointer"
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              onClick={toggleMenu}
+              className="cursor-pointer"
             >
-              <span>Home</span>
-              <span className="bg-black p-3 rounded-full border-2 border-white w-fit">
-                <Home />
-              </span>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: animateHome ? 0 : 1, y: animateHome ? 50 : 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="flex flex-col cursor-pointer"
+              >
+                <span>Home</span>
+                <span className="bg-black p-3 rounded-full border-2 border-white w-fit">
+                  <Home />
+                </span>
+              </motion.div>
+            </Link>
 
-            <motion.div
-              initial={{ opacity: 0, y: 50 }} // Initial state: fully transparent and positioned 50px below
-              animate={{
-                opacity: animateHome ? 0 : 1,
-                y: animateHome ? 50 : 0,
-              }} // Animation: fade in and move to the original position
-              transition={{ duration: 0.5, delay: 0.5 }} // Transition duration and delay
-              className="flex flex-col cursor-pointer ml-14"
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              onClick={toggleMenu}
+              className="cursor-pointer ml-14"
             >
-              <span>About</span>
-              <span className="bg-black p-3 rounded-full border-2 border-white w-fit">
-                <Info />
-              </span>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: animateHome ? 0 : 1, y: animateHome ? 50 : 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="flex flex-col cursor-pointer"
+              >
+                <span>About</span>
+                <span className="bg-black p-3 rounded-full border-2 border-white w-fit">
+                  <Info />
+                </span>
+              </motion.div>
+            </Link>
 
-            <motion.div
-              initial={{ opacity: 0, y: 50 }} // Initial state: fully transparent and positioned 50px below
-              animate={{
-                opacity: animateHome ? 0 : 1,
-                y: animateHome ? 50 : 0,
-              }} // Animation: fade in and move to the original position
-              transition={{ duration: 0.5, delay: 0.5 }} // Transition duration and delay
-              className="flex flex-col cursor-pointer ml-14"
+            <Link
+              to="menu"
+              smooth={true}
+              duration={500}
+              onClick={toggleMenu}
+              className="cursor-pointer ml-14"
             >
-              <span>Menu</span>
-              <span className="bg-black p-3 rounded-full border-2 border-white w-fit">
-                <CookingPot />
-              </span>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: animateHome ? 0 : 1, y: animateHome ? 50 : 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="flex flex-col cursor-pointer"
+              >
+                <span>Menu</span>
+                <span className="bg-black p-3 rounded-full border-2 border-white w-fit">
+                  <CookingPot />
+                </span>
+              </motion.div>
+            </Link>
 
-            <motion.div
-              initial={{ opacity: 0, y: 50 }} // Initial state: fully transparent and positioned 50px below
-              animate={{
-                opacity: animateHome ? 0 : 1,
-                y: animateHome ? 50 : 0,
-              }} // Animation: fade in and move to the original position
-              transition={{ duration: 0.5, delay: 0.5 }} // Transition duration and delay
-              className="flex flex-col cursor-pointer"
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              onClick={toggleMenu}
+              className="cursor-pointer"
             >
-              <span>Contact</span>
-              <span className="bg-black p-3 rounded-full border-2 border-white w-fit">
-                <Contact />
-              </span>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: animateHome ? 0 : 1, y: animateHome ? 50 : 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="flex flex-col cursor-pointer"
+              >
+                <span>Contact</span>
+                <span className="bg-black p-3 rounded-full border-2 border-white w-fit">
+                  <Contact />
+                </span>
+              </motion.div>
+            </Link>
           </nav>
         </main>
 
         <footer className="absolute bottom-3 flex items-center justify-center mx-auto w-full gap-4">
-          <MapPin className="h-8 w-8" />
-          <Facebook className="h-8 w-8" />
-          <Instagram className="h-8 w-8" />
+          <MapPin className="h-8 w-8 cursor-pointer" />
+          <Facebook className="h-8 w-8 cursor-pointer" />
+          <Instagram className="h-8 w-8 cursor-pointer" />
         </footer>
       </div>
     </header>
