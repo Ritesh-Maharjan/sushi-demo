@@ -65,7 +65,7 @@ const Header = () => {
         </button>
 
         <nav className="hidden sm:block">
-          <ul className="flex gap-10 items-center font-montserrat">
+          <ul className="flex gap-10 items-center font-montserrat uppercase">
             <li className="cursor-pointer">
               <Link to="ingredients" smooth={true} duration={500}>
                 Ingredients
@@ -93,11 +93,11 @@ const Header = () => {
             </li>
             <li className="cursor-pointer">
               <Button variant={"goldenborder"} onClick={togglePopup}>
-                Reservations
+                RESERVATIONS
               </Button>
             </li>
             <li className="cursor-pointer">
-              <Button variant={"goldenborder"}>Order Now</Button>
+              <Button variant={"goldenborder"}>ORDER NOW</Button>
             </li>
           </ul>
         </nav>

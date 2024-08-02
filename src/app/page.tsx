@@ -66,7 +66,7 @@ export default function Home() {
         <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
           <div className="relative w-full text-center">
             <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
-            <h2 className="text-3xl z-10 font-montserrat tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
+            <h2 className="text-3xl z-10 font-brandon-text uppercase tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
               Fresh Ingredients
             </h2>
           </div>
@@ -82,7 +82,7 @@ export default function Home() {
               />
             </figure>
 
-            <div className="flex flex-col sm:grid gap-5 grid-cols-3 flex-1">
+            <div className="flex flex-col text-lg sm:grid gap-5 grid-cols-3 flex-1">
               <p className="col-span-2">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam
                 modi laborum animi quia repellat iste amet eius, alias ipsum
@@ -112,7 +112,7 @@ export default function Home() {
         <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
           <div className="relative w-full text-center">
             <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
-            <h2 className="text-3xl z-10 font-montserrat tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
+            <h2 className="text-3xl z-10 font-brandon-text uppercase tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
               About Us
             </h2>
           </div>
@@ -129,7 +129,7 @@ export default function Home() {
             </figure>
 
             <div className="md:basis-56 md:order-1">
-              <p className="max-w-prose">
+              <p className="max-w-prose text-lg">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam
                 modi laborum animi quia repellat iste amet eius, alias ipsum
                 sequi beatae perspiciatis dignissimos totam tenetur magnam nobis
@@ -145,7 +145,7 @@ export default function Home() {
         <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
           <div className="relative w-full text-center">
             <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
-            <h2 className="text-3xl z-10 font-montserrat tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
+            <h2 className="text-3xl z-10 font-brandon-text uppercase tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
               Our Menu
             </h2>
           </div>
@@ -249,7 +249,7 @@ export default function Home() {
         <MaxWidthContent className="flex items-center justify-center flex-col gap-10 px-14">
           <div className="relative w-full text-center">
             <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
-            <h2 className="text-3xl z-10 font-montserrat tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
+            <h2 className="text-3xl z-10 font-brandon-text uppercase tracking-wide w-40 md:w-fit md:bg-black md:px-8 mx-auto">
               Pricing
             </h2>
             
@@ -276,7 +276,7 @@ export default function Home() {
         <MaxWidthContent className="flex flex-col items-center justify-center gap-10 pb-16 px-14">
           <div className="relative w-full text-center">
             <span className="h-0 absolute -z-10 left-0 top-1/2 w-full md:h-0.5 bg-white" />
-            <h2 className="text-3xl z-10 font-montserrat tracking-wide w-52 md:w-fit md:bg-black md:px-8 mx-auto ">
+            <h2 className="text-3xl z-10 font-brandon-text uppercase tracking-wide w-52 md:w-fit md:bg-black md:px-8 mx-auto ">
               Contact us
             </h2>
           </div>

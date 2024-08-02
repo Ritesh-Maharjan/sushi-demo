@@ -20,6 +20,8 @@ const config = {
     extend: {
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],
+        'roboto-slab': ["Roboto Slab", 'serif'],
+        'brandon-text': ["Brandon Text W01 Regular"],
       },
       colors: {
         golden: '#c69a50',

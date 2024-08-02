@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+@import url(https://db.onlinewebfonts.com/c/545f8f137e80bffd8840867a95163824?family=Brandon+Text+W01+Regular);
 
 @tailwind base;
   @tailwind components;
